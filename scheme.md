@@ -24,16 +24,16 @@ Esportare quindi il diagramma in png, caricarlo in un file html e pushare tutto 
 - teachers (id, first_name, last_name, email, phone)
 - students (id, first_name, last_name, email, phone, program_id)
 - departments (id, name, description)
-- programs (id, name, description, department_id)
+- courses_degrees (id, name, description, year, department_id)
 - courses (id, name, description, program_id)
 - exams (id, date, course_id)
 
 ## Relationships
-- departments -> programs (1 : *)
-- programs -> courses (1 : *)
+- departments -> courses_degrees (1 : *)
+- courses_degrees -> courses (1 : *)
 - courses -> teachers (* : *)
 - courses -> exams (1 : *)
-- students -> programs (1 : *)
+- students -> courses_degrees (1 : *)
 - students -> exams (* : *)
 - students -> courses (* : *)
 
